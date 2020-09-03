@@ -232,3 +232,44 @@
 .screen-2__point_i_1:before {
   left: 200px;
 }
+
+/* 导航条样式变动 */
+.header {
+  transition: all 1s;
+}
+
+.header_status_black {
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+}
+
+.header_status_black .header__nav-item,
+.header_status_black .header__logo {
+  color: #fff;
+}
+
+.header_status_black .header__nav-item_status_active {
+  color: #f01400;
+}
+
+.header_status_black .header__nav-item:hover {
+  transition: all 1s;
+  color: #f01400;
+}
+
+/* 右侧大纲导航样式变动 */
+.outline {
+  transform: translate(100%, 0);
+}
+
+.outline_status_in {
+  transform: translate(0, 0);
+}
+
+.outline__item {
+  transition: all 1s;
+}
