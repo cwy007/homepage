@@ -429,6 +429,7 @@ BEM 设计模式
   position: fixed;
   right: 0;
   top: 50%;
+  margin-top: -119.5px;
   padding: 5px 10px;
   background-color: #fff;
   box-shadow: 0px 4px 12px 0px rgba(7, 17, 27, 0.1);
