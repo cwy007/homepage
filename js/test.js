@@ -4,6 +4,14 @@ var screenAnimateElements = {
     '.screen-1__heading',
     '.screen-1__phone',
     '.screen-1__shadow'
+  ],
+  '.screen-2': [
+    '.screen-2__heading',
+    '.screen-2__subheading',
+    '.screen-2__phone',
+    '.screen-2__point_i_1',
+    '.screen-2__point_i_2',
+    '.screen-2__point_i_3'
   ]
 }
 

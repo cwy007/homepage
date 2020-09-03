@@ -21,8 +21,58 @@
   transform: translate(0, 100%);
 }
 
+.scrren-1_shadow_animate_done,
 .screen-1_phone_animate_done,
 .screen-1__heading_animate_done {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* 第二屏动画 */
+.screen-2__subheading,
+.screen-2__phone,
+.screen-2__heading {
+  transition: all 1s;
+}
+
+.screen-2__heading_animate_init {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.screen-2__subheading_animate_init {
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.screen-2__phone_animate_init {
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.screen-2__phone_animate_done,
+.screen-2__subheading_animate_done,
+.screen-2__heading_animate_done {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.screen-2__point {
+  transition: all 1s 1s;
+}
+
+/* .screen-2__point_done {
+  opacity: 1;
+  transform: translate(0, 0);
+} */
+
+.screen-2__point_i_1_animate_init {
+  opacity: 0;
+  transform: translate(-100%, 0);
+}
+
+.screen-2__point_i_3_animate_init,
+.screen-2__point_i_2_animate_init {
+  opacity: 0;
+  transform: translate(100%, 0);
 }
