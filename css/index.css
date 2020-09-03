@@ -360,6 +360,60 @@ BEM 设计模式
   position: relative;
 }
 
+.screen-5__bg {
+  width: 1920px;
+  height: 433px;
+  background: url("../img/bg-screen-5.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  margin-left: -950px;
+  bottom: -100px;
+}
+
+.screen-5__heading {
+  color: #f01400;
+  font-size: 46px;
+  line-height: 46px;
+  text-align: center;
+  padding-top: 130px;
+}
+
+.screen-5__subheading {
+  color: #2c3137;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  padding-top: 28px;
+}
+
+/* 立即购买 */
+.screen-buy {
+  height: 80px;
+  padding: 120px 0;
+  background-color: #2b333b;
+  background: url("../img/bg-screen-buy.png") center no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.screen-buy__button {
+  color: #fff;
+  background-color: #f01414;
+  display: inline-block;
+  width: 240px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 3px;
+  transition: all .5s;
+}
+
+.screen-buy__button:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+
 /* footer */
 .footer {
   height: 80px;
