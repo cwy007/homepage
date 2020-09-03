@@ -76,3 +76,49 @@
   opacity: 0;
   transform: translate(100%, 0);
 }
+
+/* 第三屏动画 */
+.screen-3__features,
+.screen-3__subheading,
+.screen-3__phone,
+.screen-3__heading {
+  transition: all 1s;
+}
+
+.screen-3__heading_animate_init {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.screen-3__phone_animate_init,
+.screen-3__subheading_animate_init {
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.screen-3__features_animate_init {
+  opacity: 0;
+  transform: scale(.5);
+}
+
+.screen-3__features_animate_done {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.screen-3__phone_animate_done,
+.screen-3__subheading_animate_done,
+.screen-3__heading_animate_done {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.screen-3__features__item {
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.screen-3__features__item:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+}

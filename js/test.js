@@ -12,6 +12,12 @@ var screenAnimateElements = {
     '.screen-2__point_i_1',
     '.screen-2__point_i_2',
     '.screen-2__point_i_3'
+  ],
+  '.screen-3': [
+    '.screen-3__heading',
+    '.screen-3__subheading',
+    '.screen-3__phone',
+    '.screen-3__features'
   ]
 }
 
