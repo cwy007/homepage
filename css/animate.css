@@ -256,8 +256,9 @@
   color: #f01400;
 }
 
+.header_status_black .header__nav_custom_button:hover,
 .header_status_black .header__nav-item:hover {
-  transition: all 1s;
+  transition: all 0.5s;
   color: #f01400;
 }
 

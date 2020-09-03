@@ -80,9 +80,64 @@ function setScreenAnimateInit(screenCls) {
 }
 
 // 第一步：初始化设置
-window.onload = function() {
+window.addEventListener('load', function() {
   for (k in screenAnimateElements) {
-    if (k == '.screen-1') continue;
     setScreenAnimateInit(k);
   }
+})
+
+// 第二步：滚动条设置
+function playScreenAnimateDone(screenCls) {
+  var animateElements = screenAnimateElements[screenCls];
+  for (var i=0; i<animateElements.length; i++) {
+    var element = getElem(animateElements[i]);
+    var baseCls = getCls(element);
+    setCls(element, baseCls.replace('_animate_init', '_animate_done'));
+  }
 }
+
+// 1秒后自动执行第一屏动画
+// 1.5秒后自动执行第一屏动画
+setTimeout(function () { playScreenAnimateDone('.screen-1'); }, 1000)
+setTimeout(function () { playScreenAnimateDone('.screen-2'); }, 2000)
+
+
+var navItems = getAllElem('.header__nav-item');
+var outlineItems = getAllElem('.outline__item');
+
+function switchNavItemActive(idx) {
+
+}
+
+window.addEventListener('scroll', function() {
+  var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  // 导航条样式变动
+  if (top > 100) {
+    getElem('.screen-1').style.paddingTop = 80 + 'px'; // 解决由于滚动导致页面跳动的问题
+    addCls(getElem('.header'), 'header_status_black');
+  } else {
+    getElem('.screen-1').style.paddingTop = '';
+    delCls(getElem('.header'), 'header_status_black'); // 解决由于滚动导致页面跳动的问题
+  }
+
+  if (top > (800 * 1)) {
+    addCls(getElem('.outline'), 'outline_status_in');
+  }
+
+  if (top > (800 * 1 - 200)) {
+    playScreenAnimateDone('.screen-2');
+  }
+
+  if (top > (800 * 2 - 500)) {
+    playScreenAnimateDone('.screen-3');
+  }
+
+  if (top > (800 * 3 - 600)) {
+    playScreenAnimateDone('.screen-4');
+  }
+
+  if (top > (800 * 4 - 700)) {
+    playScreenAnimateDone('.screen-5');
+  }
+})
