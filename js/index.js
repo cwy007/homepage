@@ -168,9 +168,33 @@ function switchNavItemActive(idx) {
     delCls(navItems[i], 'header__nav-item_status_active');
   }
   addCls(navItems[idx], 'header__nav-item_status_active');
+  navTip.style.left = (idx * 70) + 'px';
 
   for (var i=0; i<outlineItems.length; i++) {
     delCls(outlineItems[i], 'outline__item_status_active');
   }
   addCls(outlineItems[idx], 'outline__item_status_active');
+}
+
+// 滑动门
+var navTip = getElem('.header__nav-tip');
+function setTip(idx, elems) {
+  elems[idx].addEventListener('mouseover', function() {
+    navTip.style.left = (idx * 70) + 'px';
+  })
+
+  var currentIdx = 0;
+  elems[idx].addEventListener('mouseout', function() {
+    for(var i=0; i<elems.length; i++) {
+      if (getCls(elems[i]).indexOf('header__nav-item_status_active') != -1) {
+        currentIdx = i;
+        break;
+      }
+    }
+    navTip.style.left = (currentIdx * 70) + 'px';
+  })
+}
+
+for (var i=0; i<navItems.length; i++) {
+  setTip(i, navItems);
 }
