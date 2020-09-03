@@ -2,6 +2,10 @@
 
 这个项目实现一个静态首页
 
+```bash
+browser-sync start --server --browser "Google Chrome" --files "**/*.css, *.html, **/*.js"
+```
+
 - BEM 类命名
 - css3动画
 - js交互
