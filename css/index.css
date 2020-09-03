@@ -205,6 +205,70 @@ BEM 设计模式
   position: relative;
 }
 
+.screen-3__wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.screen-3__heading {
+  color: #fff;
+  font-size: 46px;
+  line-height: 46px;
+  text-align: left;
+  padding-top: 94px;
+}
+
+.screen-3__subheading {
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+  line-height: 28px;
+  padding-top: 25px;
+}
+
+.screen-3__phone {
+  width: 750px;
+  height: 873px;
+  background: url("../img/screen-3-phone.png") no-repeat center top;
+  position: absolute;
+  right: 0;
+  top: 195px;
+  z-index: 2;
+}
+
+.screen-3__features {
+  width: 320px;
+  height: 280px;
+  position: absolute;
+  top: 395px;
+  left: 0;
+}
+
+.screen-3__features__item {
+  float: left;
+  width: 138px;
+  height: 118px;
+  border: 1px solid #cb7173;
+  margin: 0 20px 20px 0;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+}
+
+.screen-3__features__item__number {
+  height: 36px;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 28px 0 8px;
+}
+
+.screen-3__features__item_desc {
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
 /* 第四屏 */
 .screen-4 {
   height: 800px;
