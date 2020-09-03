@@ -26,6 +26,11 @@ var screenAnimateElements = {
     '.screen-4__type__item_i_2',
     '.screen-4__type__item_i_3',
     '.screen-4__type__item_i_4',
+  ],
+  '.screen-5': [
+    '.screen-5__heading',
+    '.screen-5__subheading',
+    '.screen-5__bg',
   ]
 }
 

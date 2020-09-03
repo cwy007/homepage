@@ -168,3 +168,23 @@
 .screen-4__type__item_i_4_animate_done {
   opacity: 1;
 }
+
+/* 第五屏动画 */
+.screen-5__bg,
+.screen-5__subheading,
+.screen-5__heading {
+  transition: all 1s;
+}
+
+.screen-5__heading_animate_init {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.screen-5__bg_animate_init,
+.screen-5__subheading_animate_init {
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+/* 定义帧动画 */
