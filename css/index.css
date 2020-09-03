@@ -455,3 +455,14 @@ BEM 设计模式
 .outline__item_status_active {
   color: #f01400;
 }
+
+.header__nav-tip {
+  position: absolute;
+  width: 30px;
+  margin-left: 40px;
+  height: 2px;
+  background: #f01400;
+  left: 0;
+  bottom: 0;
+  transition: all .5s;
+}
