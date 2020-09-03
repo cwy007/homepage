@@ -84,6 +84,7 @@ window.addEventListener('load', function() {
   for (k in screenAnimateElements) {
     setScreenAnimateInit(k);
   }
+  addCls(getElem('.outline'), 'outline_status_in');
 })
 
 // 第二步：滚动条设置
@@ -105,10 +106,6 @@ setTimeout(function () { playScreenAnimateDone('.screen-2'); }, 2000)
 var navItems = getAllElem('.header__nav-item');
 var outlineItems = getAllElem('.outline__item');
 
-function switchNavItemActive(idx) {
-
-}
-
 window.addEventListener('scroll', function() {
   var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
@@ -119,25 +116,61 @@ window.addEventListener('scroll', function() {
   } else {
     getElem('.screen-1').style.paddingTop = '';
     delCls(getElem('.header'), 'header_status_black'); // 解决由于滚动导致页面跳动的问题
+    switchNavItemActive(0);
   }
 
-  if (top > (800 * 1)) {
-    addCls(getElem('.outline'), 'outline_status_in');
-  }
+  // addCls(getElem('.outline'), 'outline_status_in');
+  // if (top > (800 * 1)) {
+  // }
 
   if (top > (800 * 1 - 200)) {
     playScreenAnimateDone('.screen-2');
+    switchNavItemActive(1);
   }
 
   if (top > (800 * 2 - 500)) {
     playScreenAnimateDone('.screen-3');
+    switchNavItemActive(2);
   }
 
   if (top > (800 * 3 - 600)) {
     playScreenAnimateDone('.screen-4');
+    switchNavItemActive(3);
   }
 
   if (top > (800 * 4 - 700)) {
     playScreenAnimateDone('.screen-5');
+    switchNavItemActive(4);
   }
 })
+
+// 第三步 导航条双向定位
+// 3.1 导航条 - 点击页面跳转
+function setNavJump(i, elems) {
+  var elem = elems[i];
+  elem.onclick = function() {
+    document.documentElement.scrollTop = i * 800 + 1;
+  }
+}
+
+for (var i=0; i<navItems.length; i++) {
+  setNavJump(i, navItems);
+}
+
+// 3.2  大纲-点击跳转
+for (var i=0; i<outlineItems.length; i++) {
+  setNavJump(i, outlineItems);
+}
+
+// 3.3 双向绑定，回到 onscrollTop（移动 navIntes、outLineItems到顶固）、增加 clear 样式 函数
+function switchNavItemActive(idx) {
+  for (var i=0; i<navItems.length; i++) {
+    delCls(navItems[i], 'header__nav-item_status_active');
+  }
+  addCls(navItems[idx], 'header__nav-item_status_active');
+
+  for (var i=0; i<outlineItems.length; i++) {
+    delCls(outlineItems[i], 'outline__item_status_active');
+  }
+  addCls(outlineItems[idx], 'outline__item_status_active');
+}
