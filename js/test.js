@@ -18,6 +18,14 @@ var screenAnimateElements = {
     '.screen-3__subheading',
     '.screen-3__phone',
     '.screen-3__features'
+  ],
+  '.screen-4': [
+    '.screen-4__heading',
+    '.screen-4__subheading',
+    '.screen-4__type__item_i_1',
+    '.screen-4__type__item_i_2',
+    '.screen-4__type__item_i_3',
+    '.screen-4__type__item_i_4',
   ]
 }
 

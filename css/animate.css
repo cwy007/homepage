@@ -122,3 +122,49 @@
   transform: scale(1.1);
   border-color: #fff;
 }
+
+/* 第四屏动画 */
+.screen-4__subheading,
+.screen-4__heading {
+  transition: all 1s;
+}
+
+.screen-4__heading_animate_init {
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+
+.screen-4__subheading_animate_init {
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.screen-4__type__item_i_1 {
+  transition: all 1s .5s;
+}
+
+.screen-4__type__item_i_2 {
+  transition: all 1s 1s;
+}
+
+.screen-4__type__item_i_3 {
+  transition: all 1s 1.5s;
+}
+
+.screen-4__type__item_i_4 {
+  transition: all 1s 2s;
+}
+
+.screen-4__type__item_i_1_animate_init,
+.screen-4__type__item_i_2_animate_init,
+.screen-4__type__item_i_3_animate_init,
+.screen-4__type__item_i_4_animate_init {
+  opacity: 0;
+}
+
+.screen-4__type__item_i_1_animate_done,
+.screen-4__type__item_i_2_animate_done,
+.screen-4__type__item_i_3_animate_done,
+.screen-4__type__item_i_4_animate_done {
+  opacity: 1;
+}
