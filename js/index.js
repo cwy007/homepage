@@ -8,8 +8,8 @@ function getAllElem(selector) {
 }
 
 // 获取元素样式
-function getCls(selector) {
-  return getElem(selector).getAttribute('class');
+function getCls(element) {
+  return element.getAttribute('class');
 }
 
 //设置元素样式
@@ -69,3 +69,20 @@ var screenAnimateElements = {
     '.screen-5__bg',
   ]
 };
+
+function setScreenAnimateInit(screenCls) {
+  var animateElements = screenAnimateElements[screenCls]; // 需要设置动画的元素
+  for (var i=0; i<animateElements.length; i++) {
+    var element = getElem(animateElements[i]);
+    var baseCls = getCls(element);
+    setCls(element, baseCls + ' ' + animateElements[i].substr(1) + '_animate_init');
+  }
+}
+
+// 第一步：初始化设置
+window.onload = function() {
+  for (k in screenAnimateElements) {
+    if (k == '.screen-1') continue;
+    setScreenAnimateInit(k);
+  }
+}
